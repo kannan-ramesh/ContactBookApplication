@@ -22,7 +22,17 @@ public class Main {
 			System.out.println(" 1.View Contacts\n 2.Add Contact\n 3.Delete Contact\n 4.Search Contact\n 5.Update Contact\n 6.Exit");
 			System.out.println("\u001B[0m");
 			System.out.println("Enter your option:");
-			int choice = input.nextInt();
+			int choice;
+			while (true) {
+			    if (input.hasNextInt()) {
+			        choice = input.nextInt();
+			        break;
+			    } else {
+			        input.next();
+			        System.out.println("Invalid input! Please enter a valid number:");
+			    }
+			}
+		
 			switch(choice) {
 				case 1:{
 					addcontactview.viewContact();

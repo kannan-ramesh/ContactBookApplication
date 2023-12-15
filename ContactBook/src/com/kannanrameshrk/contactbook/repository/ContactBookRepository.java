@@ -8,7 +8,7 @@ import com.kannanrameshrk.contactbook.dto.Candidate;
 
 public class ContactBookRepository {
 	private static ContactBookRepository repository;
-	private  Map<String,Candidate> map=new HashMap<>();
+	private Map<String,Candidate> map=new HashMap<>();
 	private List<Candidate> searchContact=new ArrayList<>();
 	
 	private ContactBookRepository() {
@@ -47,5 +47,13 @@ public class ContactBookRepository {
 			}
 		}
 		return searchContact;
+	}
+
+	public Map<String, Candidate> updateName(String oldName, String newName) {
+		return map;
+	}
+
+	public Map<String, Candidate> updateNumber(String contactName, String newNumber) {
+		return map;
 	}
 }
